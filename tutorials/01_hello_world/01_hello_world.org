@@ -40,8 +40,15 @@ The first thing we need is to create the project files needed by our compiler.
 We are going to use a program called cmake that simplifies this process and makes it
 portable across platforms and compilers.
 
+0. Open a Cygwin64 terminal. You can know the current directory using the command ~pwd~, and change directories
+using ~cd~ followed by the directory where you want to go. 
 
-1. Make sure you have the CMakeLists.txt and helloworld.cpp files in the current directory.
+Using ~cd~ change to the directory where you uncompressed the lab files. You can use the key ~<TAB>~ to complete 
+filenames and directories.
+
+
+1. Make sure you have the CMakeLists.txt and helloworld.cpp files in the current directory. You can use the
+command ~ls~ to inspect the contents of the current directory.
 
 The CMakeLists.txt file is very simple: 
 
@@ -67,7 +74,7 @@ cd build
 cmake .. -G 'Visual Studio 14 2015'
 #+END_SRC
 
-3. The result is various files: XXX add these files
+3. The result is various files:
 
 [[file:files.png]]
 
@@ -92,8 +99,7 @@ Run Microsoft Visual Studio 2015.
 [[file:visualStudioHello.png]]
 
 
-5. As in C, C++ requires two states: compilation and linking. In Visual Studio both of these steps are 
-encapsulated in a process call /Build/. In our case the Solution and  the project "helloworld" are the same.
+5. As in C, C++ requires two states: compilation and linking. In Visual Studio both of these steps are encapsulated in a process call /Build/. In our case the Solution and  the project "helloworld" are the same.
 
 Build the solution by choosing /Build-Build Solution/ from the menu.
 
@@ -107,8 +113,7 @@ Select /Debug-Start without Debugging/ to run the program. This is your first pr
 
 
 
-Note that if you use /Debug-Start Debugging/ the terminal will flash in front of you and disappear.
-See this question and answer in Stack Overflow: 
+Note that if you use /Debug-Start Debugging/ the terminal will flash in front of you and disappear. See this question-and answer-in Stack Overflow: 
 
 http://stackoverflow.com/questions/1775865/preventing-console-window-from-closing-on-visual-studio-c-c-console-applicatio
 
