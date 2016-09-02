@@ -134,7 +134,7 @@ cmake .. -G 'Visual Studio 14 2015'
 
 ** Modify the program. 
 
-Edit the file ~numbers.cpp~. Make it print the numbers from 0 to 9 (inclusive), one per line. Use a for loop for that.
+Edit the file ~numbers.cpp~. Make it print the numbers from 0 to 9 (inclusive), one per line. Use a ~for~ loop for that.
 
 - Make sure you use a constant at the top of your program called ~MAX_NUMBER~. Declare it 
 ~const int~
@@ -144,7 +144,7 @@ Edit the file ~numbers.cpp~. Make it print the numbers from 0 to 9 (inclusive), 
 
 * Part 3: reading and adding multiple numbers
 
-Modify your program to read 
+Modify your program to read numbers.
 
 Close Visual Studio.
 
@@ -166,4 +166,33 @@ cmake .. -G 'Visual Studio 14 2015'
 
 ** Modify the program
 
-Edit the file ~readnumbers.cpp~. 
+Edit the file ~readnumbers.cpp~. You will assume that your input is a sequence of integers. You do not know
+how  many integers are there, but you should read until there are no more integers in the input.
+
+Your program should:
+
+- Print how many integers you read
+- Print the sume of all the integers read.
+
+For example, for the following input:
+
+#+BEGIN_EXAMPLE
+1 9 13
+4 10
+#+END_EXAMPLE
+Your output should look like:
+
+#+BEGIN_EXAMPLE
+Read 5 integers
+Sum 37
+#+END_EXAMPLE
+
+- Use ~std::cin >> variable~ to read each integer. 
+- ~std::cin >> variable~ will return false when no more integers can be read. Stop at that moment
+
+
+- *Hint*: use a ~while~ loop.
+
+
+
+
