@@ -50,7 +50,10 @@ portable across platforms and compilers.
 The CMakeLists.txt file is very simple: XXX add contents of cmake
 
 #+BEGIN_SRC cmake
+cmake_minimum_required(VERSION 2.8.9)
+project(helloworld)
 
+add_executable(helloword hello.cpp)
 #+END_SRC
 
 The important line to consider is the "add_executable". It tells the compiler to create an executable called /helloworld/ 
@@ -66,9 +69,7 @@ cmake .. -G 'Visual Studio 14 2015'
 
 3. The result is various files: XXX add these files
 
-#+BEGIN_SRC 
-
-#+END_SRC
+[[file:files.png]]
 
 * Run Visual Studio
 
