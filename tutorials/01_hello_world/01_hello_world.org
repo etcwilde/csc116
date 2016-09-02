@@ -3,7 +3,7 @@
 #+TAGS:
 #+SEQ_TODO: TODO STARTED DONE DEFERRED CANCELLED | WAITING DELEGATED APPT
 #+DRAWERS: HIDDEN STATE
-#+TITLE: Hello world tutorial
+#+TITLE: Lab 01: Hello world tutorial
 #+CATEGORY: 
 #+PROPERTY: header-args: lang           :varname value
 #+PROPERTY: header-args:sqlite          :db /path/to/db  :colnames yes
@@ -235,7 +235,7 @@ cat test_01.out
 
 I have modified my program to make it fail during test 5:
 
-[[file:test5.png]]
+[[file:test05.png]]
 
 *Warning Make sure you run the following commands in the cygwin64 Terminal, in the directory build of part3 of the lab.*
 
