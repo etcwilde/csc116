@@ -213,4 +213,29 @@ Sum 37
 
 Once you have completed your program you can tests it. Run again /RUN_TESTS are described above.
 
+When your program is completed, you should get, in the /Output/ window a message saying that /100% tests passed/
 
+[[file:passed.png]]
+
+
+If your program does not pass the tests, you can inspect their output by looking at the files ~*.out~ in the build directory.
+These files should be identical to the files found in the directory ~tests~. For example, in the ~build~ directory you can compare
+the output of your program by doing the following:
+
+1. Build ~readnumbers~. This step creates the ~*.out~ files.
+   
+2. You can inspect any of these files. 
+
+#+BEGIN_SRC sh
+cat test_01.out
+#+END_SRC
+
+You can also run ~diff~ to compare the outputs. If the files are identical, diff will not output anything. Otherwise
+it will indicate where the difference is.
+
+For example, in this case the output is adding an extra semicolon:
+
+[[file:diff.png]]
+
+
+Every time you build the binary, the 

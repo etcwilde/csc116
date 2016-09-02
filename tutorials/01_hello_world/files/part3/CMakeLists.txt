@@ -1,49 +1,38 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(readnumbers)
 
-SET(CMAKE_CXX_FLAGS "--std=c++14")
+IF(CMAKE_COMPILER_IS_GNUCC)
+   SET(CMAKE_CXX_FLAGS "--std=c++14 -pedantic -Wall -Wextra")
+ENDIF(CMAKE_COMPILER_IS_GNUCC)
 
 add_executable(readnumbers readnumbers.cpp)
 
 enable_testing()
 
-# this command runs the tests
-add_custom_command(
-    TARGET readnumbers
-    POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E echo "Running and testing $<TARGET_FILE_NAME:readnumbers> ..."
-    COMMAND readnumbers < ../tests/test-01.in > test-01.out
-    COMMAND readnumbers < ../tests/test-02.in > test-02.out
-    COMMAND readnumbers < ../tests/test-03.in > test-03.out
-    COMMAND readnumbers < ../tests/test-04.in > test-04.out
-    COMMAND readnumbers < ../tests/test-05.in > test-05.out
-#    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-)
+set(test_cmd ${CMAKE_BINARY_DIR}/readnumbers )
 
-# and these are the specific tests
 
 add_test(
     NAME test01 
-    COMMAND ${CMAKE_COMMAND} -E compare_files ../tests/test-01.out test-01.out
-#    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=01 -P ../tester.cmake
 )
 
 add_test(
-    NAME test02 
-    COMMAND ${CMAKE_COMMAND} -E compare_files ../tests/test-02.out test-02.out
+    NAME test02
+    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=02 -P ../tester.cmake
 )
 
 add_test(
-    NAME test03
-    COMMAND ${CMAKE_COMMAND} -E compare_files ../tests/test-03.out test-03.out
+    NAME test03 
+    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=03 -P ../tester.cmake
 )
 
 add_test(
     NAME test04
-    COMMAND ${CMAKE_COMMAND} -E compare_files ../tests/test-04.out test-04.out
+    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=04 -P ../tester.cmake
 )
 
 add_test(
     NAME test05
-    COMMAND ${CMAKE_COMMAND} -E compare_files ../tests/test-05.out test-05.out
+    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=05 -P ../tester.cmake
 )
