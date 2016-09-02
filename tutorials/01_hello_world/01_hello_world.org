@@ -17,17 +17,12 @@ The objectives of this lab are:
 1. learn to use Visual Studio
 2. learn to use the std::vector class
 
-* Clone the files to your computer
-
-For this course we will host our lab materials in github. Specifically at https://github.com/dmgerman/csc116
-
 * Download the cmake files 
 
 1. Download the following files:
-   1. https://github.com/dmgerman/csc116
+   https://github.com/dmgerman/csc116/tutorials/files/lab01-files.zip
+2. Uncompress the files. Make sure you know where you have decompressed them.
 
-
-This will create  directory for your lab. Called lab01.
 
 * Part 1: hello world
 
