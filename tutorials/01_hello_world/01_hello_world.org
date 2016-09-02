@@ -223,57 +223,97 @@ When your program is completed, you should get, in the /Output/ window a message
 
 
 If your program does not pass the tests, you can inspect their output by looking at the files ~*.out~ in the build directory.
-These files should be identical to the files found in the directory ~tests~. For example, in the ~build~ directory you can compare
-the output of your program by doing the following:
+These files should be identical to the files ~*.expected~ found in the directory ~tests~. 
 
-1. Build ~readnumbers~. This step creates the ~*.out~ files.
-   
-2. You can inspect any of these files. 
+You can inspect any of these files. 
 
 #+BEGIN_SRC sh
 cat test_01.out
 #+END_SRC
 
-You can also run ~diff~ to compare the outputs. If the files are identical, diff will not output anything. Otherwise
-it will indicate where the difference is.
-
-For example, in this case the output is adding an extra semicolon:
-
-[[file:diff.png]]
-
-
-Every time you build the binary, the 
-
 ** What if the program fails?
 
-I have modified my program to make it fail test 5:
+I have modified my program to make it fail during test 5:
 
 [[file:test5.png]]
 
-To debug it there are several ways. The simplest is to run it from the command line and see what happens.
-Make sure you are in the ~build~ directory and run:
+*Warning Make sure you run the following commands in the cygwin64 Terminal, in the directory build of part3 of the lab.*
+
+*** Finding out why the problem is
+
+1. To find what the program output was simply inspect the corresponding output file. In my case, this can be done with the command:
 
 #+BEGIN_SRC 
-./readnumbers.exe < ../tests/test-05.out
+cat test-05.out
 #+END_SRC
 
-My program outputs:
+This is teh result for my program:
 
 #+BEGIN_EXAMPLE
 Read 10 integers
 Sum 1
 #+END_EXAMPLE
 
-What is the expected output? We can inspect the contents of the file ~tests/test-05.expected~:
+The expected output is located in the file ~tests/test-05.expected~ of the main directory of the lab:
+
+#+BEGIN_SRC 
+cat ../tests/test-05.expected
+#+END_SRC
+
+which outputs:
 
 #+BEGIN_EXAMPLE
 Read 10 integers
 Sum -1
 #+END_EXAMPLE
 
-We can compare the output of the two commands more easily. Make sure you run this from a cygwin64 terminal in the ~build~ directory:
+As you can see, my Sum is 1 and the expected -1.
+
+*** Running your program from the command line
+
+This file was created with the following command line. 
 
 #+BEGIN_SRC 
-./readnumbers.exe < ../tests/test-05.in  > ../tests/test-05.out 
-diff 
+./readnumbers.exe < ../tests/test-05.in > test-05.out
 #+END_SRC
+
+You can run the executable without the ">" to see the output of your command:
+
+#+BEGIN_SRC 
+./readnumbers.exe < ../tests/test-05.in 
+#+END_SRC
+
+*** How to compare the outputs
+
+We use diff to compare outputs. When diff outputs nothing, the files are identical and the test is passed:
+
+
+#+BEGIN_SRC 
+./readnumbers.exe < ../tests/test-05.in  > ../tests/test-05.out
+diff  ../tests/test-05.expected  ../tests/test-05.out
+#+END_SRC
+
+This outputs for my program:
+
+#+BEGIN_SRC 
+2c2
+< Sum -1
+---
+> Sum 1
+#+END_SRC
+
+This basically tells me that my error is in the /Sum/ line of the output.
+
+*** More help
+
+You can also inspect the directory ~build/Testing/Temporary~
+
+It contains 2 files that are useful:
+
+- LastTestsFailed.log: contains the names of the tests that failed.
+- LastTest.log: contains detail information of the testing process. It will tell you what commands were executed and in which order.
+
+This are the contents of the ~LastTest.log~ regarding test-05:
+
+[[file:test05.png]]
+
