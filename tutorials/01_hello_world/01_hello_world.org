@@ -332,7 +332,7 @@ Answer the following questions.
 1. Part2. In your solution program you have declared two variables: ~MAX_NUMBER~ and the counter for the for-loop.
    Can these variables be declared ~auto~? 
 
-2. What is the expected output of test-03 of part3?
+2. Part3. What is the expected output of test-03?
 
 Hand the answers to your lab instructor.
 
