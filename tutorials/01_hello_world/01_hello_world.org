@@ -171,7 +171,7 @@ These mechanism is the one that we will use to test your assignments.
 
 1. In the solution explorer right-click on /RUN TESTS/ and select /Build/
 
-[[file::runtests.png]]
+[[file:runtests.png]]
 
 2. You will get a bunch of errors. Select the Output Tab of the /Error List/ window. 
 
