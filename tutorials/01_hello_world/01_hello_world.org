@@ -220,7 +220,7 @@ At this point your program should print the expected output.
 
 ** Run the tests again
 
-Once you have completed your program you can tests it. Run again /RUN_TESTS are described above.
+Once you have completed your program you can tests it. Run again /RUN_TESTS/ as described above.
 
 When your program is completed, you should get, in the /Output/ window a message saying that /100% tests passed/
 
