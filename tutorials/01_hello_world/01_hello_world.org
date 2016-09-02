@@ -204,7 +204,11 @@ Sum 37
 
 - Use ~std::cin >> variable~ to read each integer. 
 - ~std::cin >> variable~ will return false when no more integers can be read. Stop at that moment
-
+- When you run the program a "terminal" will appear. You can start typing integers. White space (tabs and new lines)
+are considered separators between the integers. To stop adding numbers:
+  - Under Windows: Type Control-Z
+  - Under MacOS and Linux: Control-D
+At this point your program should print the expected output.
 
 - *Hint*: use a ~while~ loop.
 
@@ -239,3 +243,37 @@ For example, in this case the output is adding an extra semicolon:
 
 
 Every time you build the binary, the 
+
+** What if the program fails?
+
+I have modified my program to make it fail test 5:
+
+[[file:test5.png]]
+
+To debug it there are several ways. The simplest is to run it from the command line and see what happens.
+Make sure you are in the ~build~ directory and run:
+
+#+BEGIN_SRC 
+./readnumbers.exe < ../tests/test-05.out
+#+END_SRC
+
+My program outputs:
+
+#+BEGIN_EXAMPLE
+Read 10 integers
+Sum 1
+#+END_EXAMPLE
+
+What is the expected output? We can inspect the contents of the file ~tests/test-05.expected~:
+
+#+BEGIN_EXAMPLE
+Read 10 integers
+Sum -1
+#+END_EXAMPLE
+
+We can compare the output of the two commands more easily. Make sure you run this from a cygwin64 terminal in the ~build~ directory:
+
+#+BEGIN_SRC 
+./readnumbers.exe < ../tests/test-05.in  > ../tests/test-05.out 
+diff 
+#+END_SRC
