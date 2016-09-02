@@ -162,7 +162,22 @@ cmake .. -G 'Visual Studio 14 2015'
 
 
 2. load the solution ~readnumbers.sln~ into Visual Studio
-3. select numbers as the default  solution
+3. select readnumbers as the default  solution
+
+** Run the tests
+
+For this program I have created a set of tests. These tests can be run from inside Visual Studio.
+These mechanism is the one that we will use to test your assignments.
+
+1. In the solution explorer right-click on /RUN TESTS/ and select /Build/
+
+[[file::runtests.png]]
+
+2. You will get a bunch of errors. Select the Output Tab of the /Error List/ window. 
+
+[[file:errors.png]]
+
+As you can see, the program failed all 5 tests. 
 
 ** Modify the program
 
@@ -194,5 +209,8 @@ Sum 37
 - *Hint*: use a ~while~ loop.
 
 
+** Run the tests again
+
+Once you have completed your program you can tests it. Run again /RUN_TESTS are described above.
 
 
