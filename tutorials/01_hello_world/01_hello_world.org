@@ -26,16 +26,6 @@ The objectives of this lab are:
 
 * Part 1: hello world
 
-Go to the subdirectory called part1. You should  have two files: 
-
-#+BEGIN_EXAMPLE
-CMakeLists.txt
-hello.cpp
-#+END_EXAMPLE
-
-
-** Run cmake
-
 The first thing we need is to create the project files needed by our compiler.
 We are going to use a program called cmake that simplifies this process and makes it
 portable across platforms and compilers.
@@ -46,8 +36,18 @@ using ~cd~ followed by the directory where you want to go.
 Using ~cd~ change to the directory where you uncompressed the lab files. You can use the key ~<TAB>~ to complete 
 filenames and directories.
 
+Go to the subdirectory called ~part1~. You should  have two files: 
 
-1. Make sure you have the CMakeLists.txt and helloworld.cpp files in the current directory. You can use the
+#+BEGIN_EXAMPLE
+CMakeLists.txt
+hello.cpp
+#+END_EXAMPLE
+
+
+** Run cmake
+
+
+1. Make sure you have the ~CMakeLists.txt~ and ~helloworld.cpp~ files in the current directory. You can use the
 command ~ls~ to inspect the contents of the current directory.
 
 The CMakeLists.txt file is very simple: 
