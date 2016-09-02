@@ -1,16 +1,24 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(readnumbers)
 
+# in case you decide to use gcc
 IF(CMAKE_COMPILER_IS_GNUCC)
    SET(CMAKE_CXX_FLAGS "--std=c++14 -pedantic -Wall -Wextra")
 ENDIF(CMAKE_COMPILER_IS_GNUCC)
 
+# make Visual studio output the binaries in the same build directory
+SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${OUTPUT_DIRECTORY}")
+SET( CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${OUTPUT_DIRECTORY}")
+
+# this is the line that says that what binary should be built
 add_executable(readnumbers readnumbers.cpp)
+
+# start tests here
 
 enable_testing()
 
-set(test_cmd ${CMAKE_BINARY_DIR}/readnumbers )
-
+# set the binary to bes tested in each of the tests below. 
+set(test_cmd ${CMAKE_BINARY_DIR}/readnumbers${CMAKE_EXECUTABLE_SUFFIX} )
 
 add_test(
     NAME test01 
