@@ -25,7 +25,7 @@ For this program the name of the executable is ~read_file~. Load the solution ~r
 
 Compile it and run it. You will see the following output
 
-[[file:usage.png]]
+[[file:images/usage.png]]
 
 ** Command line parameters
 
@@ -48,15 +48,15 @@ We will now indicate to Visual Studio what the command line arguments are to our
 
 In the /Solution Explorer/ right click on ~read_file~, and select properties:
 
-[[file:prop.png]]
+[[file:images/prop.png]]
 
 In properties, go to /Debugging-Command Line Arguments/ and change it to ~..\example.txt~, as shown below:
 
-[[file:commandLine.png]]
+[[file:images/commandLine.png]]
 
 Run the program again. It should now output:
 
-[[file:goodCommandLine.png]]
+[[file:images/goodCommandLine.png]]
 
 ** Modify the program 
 
