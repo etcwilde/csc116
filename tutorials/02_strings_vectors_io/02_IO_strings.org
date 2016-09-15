@@ -17,7 +17,9 @@ from a file
 
 * Download the files
 
-As with lab-01, download the files from and expand them into your h: drive.
+As with lab-01, download the files from 
+https://github.com/dmgerman/csc116/raw/master/tutorials/files/lab02-files.zip
+and expand them into your h: drive.
 
 
 * Part 1: Using command line parameters
