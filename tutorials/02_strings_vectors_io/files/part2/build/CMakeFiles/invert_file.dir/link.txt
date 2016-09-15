@@ -1,1 +1,0 @@
-/usr/bin/c++   --std=c++14 -pedantic -Wall -Wextra   CMakeFiles/invert_file.dir/invert_file.cpp.o  -o invert_file 

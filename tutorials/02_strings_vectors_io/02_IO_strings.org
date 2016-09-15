@@ -15,6 +15,11 @@
 In this lab we will learn to use strings, vectors and read
 from a file
 
+* Download the files
+
+As with lab-01, download the files from and expand them into your h: drive.
+
+
 * Part 1: Using command line parameters
 
 As with lab01, download the sources code for this lab from here:
@@ -31,7 +36,7 @@ Compile it and run it. You will see the following output
 
 This program requires a filename when the program is run.
 
-You can do this by running the program from the command line (cygwin, in the build directory). If ~read_file.exe~ does
+You can do this by running the program from the command line (cygwin terminal, in the build directory). If ~read_file.exe~ does
 not exist, you first need to compile it.
 
 #+BEGIN_SRC sh
@@ -41,7 +46,7 @@ read_file.exe  anystring
 The output is:
 
 #+BEGIN_EXAMPLE
-File to read:  [abc]
+File to read:  [anystring]
 #+END_EXAMPLE
 
 We will now indicate to Visual Studio what the command line arguments are to our program.
@@ -69,10 +74,9 @@ This is the sea.
 And this is the end of the world.
 #+END_EXAMPLE
 
-Your program should output
+Your program should output:
 
 #+BEGIN_SRC 
-File to read [..\example.txt]
 .aes eht si sihT
 .dlrow eht fo dne eht si siht dnA
 #+END_SRC
@@ -106,9 +110,10 @@ int main ()
 }
 #+END_SRC
 
-** test it
+** Test it
 
-Once you are satisfied with your solution, test your program (see part3 of the first lab for details).
+Once you are satisfied with your solution, test your program by hand. 
+Then run the automatic tests (see part3 of the first lab for details).
 There are 5 tests in for this part.
 
 #+BEGIN_EXAMPLE
@@ -141,7 +146,7 @@ Load the file ~invert_file.sln~ into Visual Studio.
 This time we are going invert the lines in the file. Your program should take the name of the program from the command
 line. 
 
-1. Each line should be output only once.
+1. Each line should be output only once. It should output the first version of the line (according to the original order of the file).
 2. The lines should be output in inverse order
 
 Let us assume this is the input file:
@@ -167,13 +172,13 @@ And this is not.
 This is the Sea.
 #+END_SRC
 
-Note that the file /This is the Sea./ is not output the second time.
-
 ** Hint:
 
 - Use a vector of strings to keep track of the lines.
 - You do not know how many lines are in the input file, therefore you need to 
   add elements to the vector using ~push_back~.
+
+** How to use push_back
 
 Given the declaration:
 
