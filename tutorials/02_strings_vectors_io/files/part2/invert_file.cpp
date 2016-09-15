@@ -1,11 +1,7 @@
 #include <iostream>
+#include <fstream>
 #include <string>
-
-std::string reverse(const std:string &st)
-{
-    
-}
-
+#include <vector>
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +11,7 @@ int main(int argc, char *argv[])
     }
     std::string inputFileName = argv[1];
 
-    std::cout << "File to read:  [" << inputFileName << "]" << std::endl;
+    // write your solution here
 
     return 0;
 }

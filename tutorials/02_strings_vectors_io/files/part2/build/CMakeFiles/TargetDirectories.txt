@@ -1,0 +1,4 @@
+/home/dmg/git.dmg/csc116.public/tutorials/02_strings_vectors_io/solution/part2/build/CMakeFiles/test.dir
+/home/dmg/git.dmg/csc116.public/tutorials/02_strings_vectors_io/solution/part2/build/CMakeFiles/rebuild_cache.dir
+/home/dmg/git.dmg/csc116.public/tutorials/02_strings_vectors_io/solution/part2/build/CMakeFiles/edit_cache.dir
+/home/dmg/git.dmg/csc116.public/tutorials/02_strings_vectors_io/solution/part2/build/CMakeFiles/invert_file.dir

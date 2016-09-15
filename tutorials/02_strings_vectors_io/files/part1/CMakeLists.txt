@@ -23,7 +23,7 @@ enable_testing()
 
 # set the binary to bes tested in each of the tests below. 
 set(test_cmd ${CMAKE_BINARY_DIR}/${binary}${CMAKE_EXECUTABLE_SUFFIX} )
-set(tester   ${CMAKE_CURRENT_SOURCE_DIR}/tester.cmake)
+set(tester   ${CMAKE_CURRENT_SOURCE_DIR}/tester-2.cmake)
 set(tests_loc ${CMAKE_CURRENT_SOURCE_DIR}/tests)
 
 add_test(
@@ -51,12 +51,3 @@ add_test(
     COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=05 -DLOC=${tests_loc} -P ${tester}
 )
 
-add_test(
-    NAME test06
-    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=06 -DLOC=${tests_loc} -P ${tester}
-)
-
-add_test(
-    NAME test07
-    COMMAND ${CMAKE_COMMAND} -DEXE=${test_cmd} -D ID=07 -DLOC=${tests_loc} -P ${tester}
-)

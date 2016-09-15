@@ -1,9 +1,14 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 
-std::string reverse(const std:string &st)
+std::string reverse(const std::string &st)
 {
+    std::string result {};
+
+    // write your code here
     
+    return result;
 }
 
 
@@ -15,7 +20,9 @@ int main(int argc, char *argv[])
     }
     std::string inputFileName = argv[1];
 
+    // you will have to remove this line when you complete your progrma
     std::cout << "File to read:  [" << inputFileName << "]" << std::endl;
+
 
     return 0;
 }
