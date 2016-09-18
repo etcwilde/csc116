@@ -95,13 +95,13 @@ Study and use it to create yours. The major difference is that you need to rever
 int main ()
 {
     std::ifstream myfile;
-    myfile.input("inputfile.txt");
+    myfile.open("inputfile.txt");
 
     if (myfile.is_open()) {
 
         std::string line;
         while ( std::getline (myfile,line) ) {
-            std::cout << line << std::end;
+            std::cout << line << std::endl;
         }
         myfile.close();
 
