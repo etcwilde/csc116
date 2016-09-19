@@ -196,4 +196,16 @@ lines.push_back(st);
 
 This will increase the size of the vector by one.
 
+* Questions
+
+Answer the following questions:
+
+- In which position of the vector does ~push_back~ insert the new element?
+
+- What is the return value of ~std::getline as in:
+
+#+BEGIN_SRC C++ 
+std::getline (myfile,line)
+#+END_SRC
+
 
