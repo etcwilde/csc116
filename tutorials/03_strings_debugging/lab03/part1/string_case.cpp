@@ -62,7 +62,7 @@ int main()
 		std::cout << "The input is: \"" << input_string << "\"" << std::endl;
 		
 		std::string no_caps = remove_uppercase(input_string);
-		std::cout << "With capital letters removed: \"" << input_string << "\"" << std::endl;
+		std::cout << "With capital letters removed: \"" << no_caps << "\"" << std::endl;
 		
 		int uppercase_count {}, lowercase_count {};
 		count_case(input_string, uppercase_count, lowercase_count);
