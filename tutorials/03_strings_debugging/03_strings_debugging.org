@@ -53,7 +53,7 @@ Choosing "Break" will stop the program and seek to the line of code where the er
 Notice the arrow next to line 49, which indicates the position of the program when the error occurred. The lower pane shows all of the
 variables available at this point in the code. Objects, like the string variable ~s~, can be expanded to examine their contents.
 Notice that the "size" attribute is equal to 10, but the index ~i~ is also equal to 10. Since there is no index 10 in a sequence
-of 9 elements (with indices that start at 0), a possible source of the error is an out of bounds call to ~.at()~ on line 49.
+of 10 elements (with indices that start at 0), a possible source of the error is an out of bounds call to ~.at()~ on line 49.
 
 ** Breakpoints
 
