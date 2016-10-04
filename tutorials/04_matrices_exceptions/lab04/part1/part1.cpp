@@ -39,7 +39,7 @@ matrix_type identity( unsigned int n ){
 /* hilbert(n)
    Compute and return the n x n Hilbert matrix.
    
-   The Hilbert matrix has entry (i,j) set to 1/(i + j), for
+   The Hilbert matrix has entry (i,j) set to 1/(i + j - 1), for
    each row i and column j in the range (1,2,3,..., n).
    Note that in the definition above, row indices and column
    indices start at 1, not 0.

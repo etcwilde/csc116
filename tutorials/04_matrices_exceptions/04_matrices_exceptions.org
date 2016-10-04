@@ -38,7 +38,7 @@ The ~matrix_type~ is therefore a vector containing row vectors, with the content
 
 The ~part1.cpp~ file contains three functions for you to implement.
  - The ~identity~ function constructs an N x N identity matrix.
- - The ~hilbert~ function constructs an N x N Hilbert matrix. Recall that entry (i,j) of a Hilbert matrix is equal to 1/(i + j). Note that you will have to adjust the formula to accommodate the 0-based indexing used in C++.
+ - The ~hilbert~ function constructs an N x N Hilbert matrix. Recall that entry (i,j) of a Hilbert matrix is equal to 1/(i + j + 1). Note that you will have to adjust the formula to accommodate the 0-based indexing used in C++.
  - The ~add_matrices~ function adds two matrices together and returns the result.
 
 The comments in ~part1.cpp~ contain additional details about each function.
