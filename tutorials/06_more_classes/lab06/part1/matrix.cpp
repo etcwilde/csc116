@@ -24,7 +24,7 @@ Matrix::Matrix(unsigned int num_rows, unsigned int num_cols){
    Create a matrix of the given size, with all values
    set to the default value provided.
 */
-Matrix::Matrix(unsigned int num_rows, unsigned int num_cols, double default_value): Matrix(num_rows,num_cols){
+Matrix::Matrix(unsigned int num_rows, unsigned int num_cols, double default_value){
 
 }
 
