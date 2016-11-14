@@ -199,9 +199,15 @@ p2 = p1;
 #+END_SRC
 
 
+* Files
+
+Download, as usual, the files for the labs. Run cmake and load the file linked-list into Visual Studio.
+
+https://github.com/dmgerman/csc116/raw/master/tutorials/files/lab08-files.zip
+
+
 * Part 1
 
-Download, as usual, the files for part1 of the labs. Run cmake and load the file linked-list into Visual Studio.
 
 This file contains a class  a simple single-linked-list of strings called *link_list_string*. Inspect the code. The list links nodes of type *link_node_string*. 
 
