@@ -9,7 +9,7 @@ class link_node_string {
     std::string data;
     link_node_string *next;
 public:
-    link_node_string(std::string _st): data(_st) {};
+    link_node_string(std::string _st): data(_st),next(nullptr) {};
     link_node_string() {};
     link_node_string* get_next() {
         return next;
@@ -66,7 +66,7 @@ public:
             tail = node;
             head = node;
         } else {
-            head->set_next(node);
+            node->set_next(head);
             head = node;
         }
     };
